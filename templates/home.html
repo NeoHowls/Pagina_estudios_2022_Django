@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Remix Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--Css-->
+        <link rel="stylesheet" href="{% static 'css/home.css' %}"> 
+
+        <!--Javascript-->
+        <script src="{% static 'js/home.js' %}"></script>
+
+        <title>Study Page</title>
+    </head>
+    <body>
+        <!--Header-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <i class="ri-quill-pen-line nav__logo-icon"></i> Study Page
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#cobtact" class="nav__link">Contact Us</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{% url 'teacherlogin' %}" class="nav__link">Docente</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{% url 'login' %}" class="nav__link">Alumnos</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--Home-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="{% static 'img/home.png' %}" alt="" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Haz que aprender <br> sea distinto
+                        </h1>
+                        <p class="home__description">
+                            Plataforma educativa de matemáticas, comprensión lectora,
+                            ciencia y artes.
+                        </p>
+                        <a href="#about" class="button button--flex">
+                            Explorar <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Follow Us</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--About-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img src="{% static 'img/about.png' %}" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            El gusto de jugar es innato <br> Y lo potenciamos al máximo.
+                        </h2>
+
+                        <p class="about__description">
+                            Aprender es divertido y motivante. Comparte con tus compañeros
+                            y usuarios de la plataforma.
+                        </p>
+
+                        <div class="about__details">
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Cada etapa es como un juego
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Motivación
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Actividades
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                Evaluación
+                            </p>
+                        </div>
+
+                        <a href="#" class="button--link button--flex">
+                            Ver ahora <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--Mision and Vision-->
+            <section class="steps section container">
+                <div class="steps__bg">
+                    <h2 class="section__title-center steps__title">
+                        Misión y Visión
+                    </h2>
+
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">01</div>
+                            <h3 class="steps__card-title">Misión</h3>
+                            <p class="steps__card-description">
+                                Nuestra misión es intentar mejorar la educación chilena a base de aprovechar la tecnología actual.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">02</div>
+                            <h3 class="steps__card-title">Visión</h3>
+                            <p class="steps__card-description">
+                                Nuestro objetivo principal es entregar una plataforma de calidad en la cual tanto estudiante como profesores puedan aprovechar para poder aprender mejor y al mismo tiempo motivar al alumno al autoaprendizaje.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Contact-->
+            <section class="contact section container" id="contact">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            Contactanos <br> desde cualquier via de <br> información
+                        </h2>
+
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Llamanos</h3>
+                                <span class="contact__description">
+                                    <i class="ri-phone-line contact__icon"></i>
+                                    +56 9 9191 6767
+                                </span>
+                            </div>
+
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Envia un email</h3>
+                                <span class="contact__description">
+                                    <i class="ri-mail-line contact__icon"></i>
+                                    inacapmail@email.com
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <div class="contact__content">
+                                <input type="email" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Email</label>
+                            </div>
+
+                            <div class="contact__content">
+                                <input type="text" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Asunto</label>
+                            </div>
+
+                            <div class="contact__content contact__area">
+                                <textarea name="message" placeholder=" " class="contact__input"></textarea>                              
+                                <label for="" class="contact__label">Mensaje</label>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex">
+                            Enviar mensaje
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <i class="ri-quill-pen-line"></i> Study Page
+                    </a>
+
+                    <h3 class="footer__title">
+                        Suscribete <br> para estar al día
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        <input type="email" placeholder="Ingresa tu email" class="footer__input">
+
+                        <button class="button button--flex footer__button">
+                            Subscribirse
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Dirección</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">1234 - Iquique</li>
+                        <li class="footer__information">La Libertad - 43210</li>
+                        <li class="footer__information">123-456-789</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contactanos</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">+56 9 9888 5777</li>
+                        
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        Aceptamos todas las tarjetas
+                    </h3>
+
+                    <div class="footer__cards">
+                        <img src="{% static 'img/card1.png' %}" alt="" class="footer__card">
+                        <img src="{% static 'img/card2.png' %}" alt="" class="footer__card">
+                        <img src="{% static 'img/card3.png' %}" alt="" class="footer__card">
+                        <img src="{% static 'img/card4.png' %}" alt="" class="footer__card">
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Study Page. All rigths reserved</p>
+        </footer>
+    </body>
+</html>

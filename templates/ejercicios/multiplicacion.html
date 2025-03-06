@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Remix Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--Box Icon-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--Css-->
+        <link rel="stylesheet" href="{% static 'css/ejercicios.css' %}"> 
+
+        <title>Multiplicación</title>
+    </head>
+    <body>
+        <audio id="myAudio">
+            <source src="{% static 'sonido/wrong.mp3' %}" type="audio/mpeg">
+        </audio>
+
+        <!--Header-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="{% url 'Home' %}" class="nav__logo">
+                    <i class="ri-quill-pen-line nav__logo-icon"></i> Study Page
+                </a>
+            </nav>
+        </header>
+
+        <!--Main-->
+        <div class="wrapper">
+            <div class="equation">
+              <h1  id = "num1"></h1>
+              <h1  id = "operacion">*</h1>
+              <h1  id = "num2">1</h1>
+              <h1  id = "equal">=</h1>
+              <h1  id = "question">?</h1>
+            </div>
+            <div class="answer-options">
+              <div class="options">
+                <h1 id="option1">1</h1>
+              </div>
+              <div class="options">
+                <h1 id="option2">2</h1>
+              </div>
+              <div class="options">
+                <h1 id="option3">3</h1>
+              </div>
+            </div>
+        </div>
+      
+
+        <!--Footer-->
+        <footer class="footer section">
+            <p class="footer__copy">&#169; Study Page. All rigths reserved</p>
+        </footer>
+
+        <!--Js-->
+        <script src="{% static 'js/multiplicacion.js' %}"></script>
+
+    </body>
+</html>

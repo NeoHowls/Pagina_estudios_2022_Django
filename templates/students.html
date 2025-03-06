@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Students</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Remix Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+       
+        <!--Css-->
+        <link href="{% static 'css/students.css' %}" rel="stylesheet"> 
+    </head>
+
+    <body>
+
+        <!--Header-->
+        <header class="header">
+            <nav class="navbar navbar-expand-sm navbar-main">
+                <div class="container">
+                    <a class="navbar-brand" href="{% url 'profile' %}">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAPEBAQEA8QEA8PDw8PDw8NDw0PFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OFQ8PFSsZFRkrKysrKy0rLS0tKy03LS03NzctLTcrLS0rLS0rKysrKy0tLSsrKysrKystKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xAA1EAACAgECBAMGBAYDAQAAAAAAAQIDEQQFBhIhMRNBUQciYXGRsRQyUmIVI0JygaEWM8E0/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQACA//EABkRAQEBAQEBAAAAAAAAAAAAAAABEQIxQf/aAAwDAQACEQMRAD8AXeri/wCr/YI3RfmvqZw92s9TqG9WLzNtNGc16g516oz+O+2eoa36z1LFi/c/yBzlHjxFNfEc18RSfkWLFv5hSuDl2GnD1M9RjKeDR9o2SuCXNHJYlNr2y2XaLHC2C3GcM0euiC7RX0FPDXovoBjM1sFvozm7YbV5M09QXovoFKqL7pfQkyG7Q2QfVHMdHOX9Jq9m21S7xX0BXttS7RX0NFnm3cN2Wd1gn9JwdHHvMt0K0uySOmFCpvg2oL/hlRbTmTAqFunCMVDMO5TtfoJVPElg2S3BEbntNdqeUiFZFJCUmWjeeHpVtuKyis6hY7kMISmR24z6DqbI3crMIViuat9WIYFL5dRJMbDgwwg0GLAAABYsPXMLmGH4gCvFH/OHzDFXitdmROHSmWDhrapXziksrJG7HtU9TYoxXn3Ns4U2GvSwXNhSBJfYtthRWunXBM1apZ7lf3jdowWFJDXbNc54eegayu1d2RaMiHotJGiYmHIAkwzJBgAAkATYYnYxQTmIWW4BOQ1tYoUrgnehnqZYRA7nvUaOsmCxZbKYzTTWUyj8U8OYzOC6dWKVcf0xwm13JvR8QafVJpTjl+WSTINXLlbT6YITc7sruaFx3w28O2r59DLNXzL3X3Qoyl3OTqTOclVXQYSDDWdAAAFp00AABrDBof7ZpZWSUY92xjFGgcB7OlGeon/Ssoimtqsp22pSnh2Yz8ckLunHeosl7jaS7JELxFr3ddLr0Twhpo7IweZLKBmpR8T3TeJSefiaVwnqnKuLb69DGtZOMp5h0WTTuBLG4IsDUNHZlEnp5ETtq6IlqugqHsGdiMGLIzWgAAAIBKwUbEZsURkNrEOmI2CjC+PR5Mb9ou4/zHBPsbJuE8Qk/gzztxnqHPUz+bC0oaGZSxnzJGnUXaScZxk/qyHjLDyOrLpTXV9iTbOD98jrqeWfV4wyle0PhxUy8WC919xL2aazkuUfU03ifbVfRJYz0yUTzpZETRI7xp/DslB+TZG5GiuuYHMJ8wXMZZK8wBLmASJhhHRuNwrpY5nFerRtVVVem2x/qnAx/Za+a+tfuX3Nc4wpktJDl/SvsRZTcvefzYnIXujljeaIBWstGrcBUPliZ7w1tk77YxUW1nq8G+8M7HGmEenkgoxNaKrlih3EHKEi1HEGLwY1ixzWGooggZAwDliFgsxGwiTOJnNl2DmNmSEMNyhmEl8Ged+M9LOGom/JtnpadSZTuMODoamDlFYl/wCg088oXpLHrOErKptSTEHsbXqSOOFLeS+D+JulTUq16OJiG1be42R790bPoLcVQT74X2HUxL2j6bk1Lwu5TDUvarpE2rMGWyLUJgCCZB0A5AWDRo6Ryjo3GokNjeL63+5fc3XX6XxtNCOMvlX2MF2uWLa3+5fc9B7XbmmDf6V9hNUifBcpdUhXTeztt5fYuz1yTwPNLreYyyQ4Y4aq00V7q5vXBaIYXYaUy6C8ZAjhSDTE4yO2wRWLHNTI7xsC1VxA/CE42nXORDBw4nTkcyZA1vpyJRrwPJsQkwTkJyCbE5SA6Za/barHmUUQ2o4do74SJ3UWdCH1t7AxHR2SmEuZJZRJ1x6YRH12NslaI9CWIDi3ZFfRJtZaWTA9yo8Oco+jaPUGskvBmv2s848V/wD0WenM/uOlBoJnWDlmhQAABMDR0co6NxuF9E/5kP7kb/tfXTQf7Uef9J+eH9yPQWw+9pq/7V9haMLc5/ySW1vqhDVVC22fmMsLPVIWUhjCY4hIyjhSE7rpYAcyZIhCbY7pkxs5JHdcyCQhb0O/GGqYUmMR7C0V5yL8TApVqCxYfSkISkGpZEpszUKUxtZaC2wZzmZ0j1FhHXwyPJsQaJqE9LpuuSQ7CVKFJsCrHG+8rT0S69WsGE6/UOyTk+7eS/8AtS1L51HP+DN5Pqaics5Z0zlmoyLAYQYjIWlp5LyC8KXoTXJjujlpGpSiqekov0aN/wCFJZ01f9qMUjQpNJLzRtXDEOXTwX7UWnT/AFFaE9DX72R04ZFKKsAyc1scxYhCIsmZRVsaanUKPmhrue7Qqi8vqUfdOJsyfKSWnVbnjPVCNO9JPq0Z7qd3nLzGz3GXqxTXq+Ia/VB27/X6ox57jNebOf4nP1/2K1rq3mMh1p9an5mQU71OLzlkzt/EkspN4DRrXdLbkUtZX9i3KE0veWfmT7w10M1GNw3Y7tiNpRM1oUUHKB3VE7sj0Aw2iCUhOcuonOwPSyb2oxfip+RnkjVPaZts5x8Rdl3MsaNQuTlnbOTpjFEAMBYzi7SoTOPwiHeAIzrRDT6NKSfTuavss14MceSRmdbLXw3rv6Gx1LjBjquIyol2JGtEAzggeIN+jTFpPqSW76lV1yk/JMx3ft3lZN9emSR1uu8Tsb6sindkjJ6x57nMdeA1IzmJu3AxnrBJ6kRp/K8CtI53nUbxxJRM65hnVcKyuBJjad8somvebjk17hne46iCeTBHMtPAu9um3lb914Bttk0N7InemvU4KS80GzNiFXEUtj0EnLAJ3dO4JG6h4YzsuO9bb1ZEau58sn6II0heOdzh4Lh5tGRWxJvf9dOyySk3hPpkhZs3EQYTDkEdZQIAAEl+ABAONUdQJLabMWLyI6CHFDw0OlpehllRJmvsVjh2blFZZZovCFixUPaLuPhVcif5u5i+r1Tk2XT2o7k5XcnkjPJyFO52nPiMS5gslgwq7mF4glkGTSwrzhq1iICWHleoaFXqmR2Q+cjiQ/Ei+l1Ti8p4a7ESpi9UzJehOAde7tNFt9UupaGjO/ZVq81OJoaYI11ssIjHqGSW4roQb8zNJLU2ZZ1VQpRfxQ3k8sl9FWuUzCx3jvavCsc0sJsp82a/7TtKnVzLyMekzUTiRyG2EdAAAALQ0DAMHaCwc61gQFYCaQtUupFd+EXmKLXLsVzhLT8tfNnoywzksDrNYj7S6GtS5Pt5FIkzUPatRlxkZdM0HIQYRqIAAASAAAEgAABIBaliItUuxJpvsq1WJuJrsJ9DI/ZjpHHNnqanTPoZpdaxZRDTj3JfUS6EdaujOdKJ7zJ7SLESJ0NGZt+RM4wsBErXHen59PLt2ML1EMNo3vi9508/kYTrvzP5mojRhZOsHLRsCAABJoiAEDJgyukdVvqJcwEwaaRw3cvBSJKV3kVnha/NZL3WYJmqt7R6HOpNeRkF0cM3Lf6/FqlHzwzGd30zrskn6m4KjwM6CZsOQBgFCABgJADAAwpBIcaeDfQSgib2HS+JbFY6Ik0/gHSuFCz3Zc4yIDZYKEEl5ExCwzUXsmNbFnojucgURyzlS6oo5UdyF5IRYakLv+n8SuUM4b6GdazhSKy5MunE24OuWEUnVbrKyTjzPL6dzUqQep2mClyx6sVhwtZJLC7lh2/Y7HJTfZ9S21zhCKTS6HWMs7/4TIBoX8Sr+ABxGGs4R1Nab5W0vREJfo5w/NFr/B6KdaeU0sEfrdg09uc1xy/PCOdGvPjiBI1DefZ5zZdTx8CnbjwpqaW8xbS80DUd8M38uUTmqu6Fe2eicZ4cWvmSmuk0RFff9ClcU7apJziupZLbSN1VmU15FEziyDXkJMsm5aKPdERfpzrAYoAs6jl1iiQBTwwuQljg6R0qxamjLJBp4ZLvw1plHEmupX9DQk+pZNHbjoFC56TUdiUpvKrpNQTWkuyjnWolpTHmkj5kXXLJLaM5Ul5iEheY3sfQAzvjK3NmCkQfLZn4lu4nfNqMfEiNXt67pGoU3TvajBfIZazf08pvqQ865JeZFTjJvs2dYEv/ABX4gIz8FZ+lgHRr1ugwkGTmAnZRGXdJigCKLt2OhvPIslG4v2x0vMV0f+jTcEZu+gjdHDS7PuZxqVh1su5GXzNJ3DgmSbcWsehWdz4clXBt4z6FGlKv6kffX1JfWUNN9HgjLppdzcoMp0nK0kmOFq4pj2jca+zwaKJ/BT9APSSXdFhWuqXoJarU1OJJAxqF4IK22PkcxsQBIadknp5kHTaSWmsz2M1LBpLWTmh1JX9HVJ+TJ3S6Xsc+q1E5pLCZ0kyvUSxgltLZ0OenEpNjXVTxCT+B2pjXc7MVS+RBl276rN7b8mWDaNHG+PdZKjubbsnj1Zzte8W0STzhGpUum48Ny5fdI/ZtnrhY/Ggu/TJMbHxnVP3bSd1Oko1K5q3h+WDpAb/gtJ+iIBH+D3eoCZytZQYSDNMAwgwERZG9shWbEJkiNyyis7vQm+qLPZ2IDc4d2Bio67Q1yz7qKlunC/NlxLvq+jGcpk0yvcthlWyJlopo17UaSM+6X0InWbLHukvoa1MxlzL1CTbLtdtCTeYr6CK2iP6f9FalUqolJ4H+m2pssum2uK68pIV6OK8g0ahtFs66ZJnTbXGPVIdRgkOqgtMdUVcqSwO4icUdnHqtQpCXUk9JIi6yR0zMFJ1yGW+P+TL5DiEhLdY5pl8hgZTqH70vmMr6cj7VL35fMRYxIqcJR6rKJnZOJLaHH3nhPr8hvbVkYXado6xNL/57H0AZhzMBpPXkQ2AAuIgMACJOwQmABEjd2ITcuwAAoq+u7jBgADcASmAA0GGo7jdBAJFI9gAATNGxeoAAp5OonQAHDr10d1ElpgABU9gHrv8Aql8mEA18ZjKNw/7J/MbgASdCGqDAdIkcAADSf//Z" alt="pfp" style="width:40px;" class="rounded-pill">
+                    </a>
+                    <p class="nav__welcome">¡Hola!, {{ user.username }}</p>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                            <i class="nav-toggeler-icon ri-menu-line"></i>
+                        </button>
+                    <div class="collapse navbar-collapse justify-content-end nav__links" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link nav__link" href="#home">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active nav__link" href="{% url 'logout' %}">LogOut</a>
+                            </li>    
+
+                            <li class="nav-item">
+                                
+
+                            </li>   
+                        </ul>
+                  </div>
+                </div>
+            </nav>
+        </header>
+
+
+            
+
+
+        <!--main-->
+        <main>
+            <div class="main__page" id="home">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="title mt-4">Asignaturas</h1>
+                    </div>
+                    <div class="row">
+                        <table class="mt-4 mb-4">
+                            <tr>
+                                <td>
+                                    <div class="container">
+                                        <h5>Aprende Matematicas</h5>
+                                        <br>
+                                        <a href="{% url 'ejercicios' %}">
+                                            <img class="img-fluid" src="{% static 'img/math.png' %}" alt="math" width="50%">
+                                        <a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="container">
+                                        <h5>Aprende Ciencias</h5>
+                                        <br>
+                                        <a href="#">
+                                            <img class="img-fluid" src="{% static 'img/sciences.png' %}" alt="ciencia" width="65%">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="container">
+                                        <h5>Aprende Lenguaje</h5>
+                                        <br>
+                                        <a href="#">
+                                            <img class="img-fluid" src="{% static 'img/language.png' %}" alt="lenguaje" width="50%">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="container">
+                                        <h5 class="mt-5">Aprende Historia</h5>
+                                        <br>
+                                        <a href="#">
+                                            <img class="img-fluid" src="{% static 'img/history.png' %}" alt="historia" width="50%">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+ 
+
+        <!--Footer-->
+        <footer class="footer section">
+            <p class="footer__copy">&#169; Study Page. All rigths reserved</p>
+        </footer>
+
+
+    </body>
+</html>

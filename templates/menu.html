@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Remix Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--Box Icon-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--Css-->
+        <link rel="stylesheet" href="{% static 'css/menu.css' %}"> 
+
+        <title>Ejercicios</title>
+    </head>
+    <body>
+
+        <!--Header-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="{% url 'Home' %}" class="nav__logo">
+                    <i class="ri-quill-pen-line nav__logo-icon"></i> Study Page
+                </a>
+            </nav>
+        </header>
+
+        <!--Main-->
+        <div class="container">
+            <div class="row">
+                <h2>Escoge cual practicar</h2>
+                <div class="container__menu">
+                    <div class="box">
+                        <a href="{% url 'suma' %}"  class="link__blox">Suma</a>
+                    </div>
+                    <div class="box">
+                        <a href="{% url 'resta' %}" class="link__blox">Resta</a>
+                    </div>
+                    <div class="box">
+                        <a href="{% url 'multiplicacion' %}"  class="link__blox">Multiplicación</a>
+                    </div>
+                    <div class="box">
+                        <a href="{% url 'division' %}"  class="link__blox">Division</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer class="footer section">
+            <p class="footer__copy">&#169; Study Page. All rigths reserved</p>
+        </footer>
+    </body>
+</html>

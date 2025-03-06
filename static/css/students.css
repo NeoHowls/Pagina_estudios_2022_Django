@@ -1,0 +1,85 @@
+/*-Google fontss-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/*- Variables -*/
+:root{
+    --header-height: 3.5rem; /*56px*/
+  
+    /*- Colors -*/
+    --hue: 152;
+    --first-color: hsl(var(--hue), 24%, 32%);
+    --first-color-dark: hsl(var(--hue), 23%, 16%);
+    --first-color-light: hsl(var(--hue), 24%, 66%);
+    --first-color-lighten: hsl(var(--hue), 24%, 92%);
+  
+    /*- Font and typography -*/
+    --body-font: 'Poppins', sans-serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--first-color);
+}
+
+/*- Header -*/
+.header{
+    background-color: #fff;
+    margin-top: .5rem;
+}
+
+.nav__welcome{
+    display: block;
+    margin-top: .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.nav-toggler-icon{
+    color: var(--first-color-dark);
+}
+
+.nav__links{
+    padding-left: 1rem;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__link:hover{
+    color: var(--first-color-dark);
+}
+
+.navbar-main .active{
+    text-decoration: underline wavy var(--first-color);
+    text-underline-offset: .5rem;
+}
+
+/*- Main -*/
+.main__page{
+    background-color: var(--first-color-lighten);
+    border-radius: 1rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+
+/*- Footer -*/
+.footer__copy{
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    margin: 5rem 0 1rem;
+}

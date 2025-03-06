@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Remix Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--Box Icon-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--Css-->
+        <link rel="stylesheet" href="{% static 'css/login.css' %}"> 
+
+        <title>LogIn</title>
+    </head>
+    <body>
+
+        <!--Header-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="{% url 'Home' %}" class="nav__logo">
+                    <i class="ri-quill-pen-line nav__logo-icon"></i> Study Page
+                </a>
+            </nav>
+        </header>
+
+        <!--Main-->
+        <div class="login">
+            <div class="login__content">
+                <div class="login__img">
+                    <img src="{% static 'img/login.svg' %}" alt="login">
+                </div>
+
+                <div class="login__forms">
+                    <form action="" class="login__registre" id="login-in" method="post">
+                        {% csrf_token %}
+                        <h1 class="login__titile">Iniciar Sesión</h1>
+                        
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input type="text" placeholder="Nombre de Usuario" class="login__input" name="username">
+                        </div>
+
+                        <div class="login__box">
+                            <i class='bx bxs-lock login__icon'></i>
+                            <input type="password" placeholder="Contraseña" class="login__input" name="password">
+                        </div>
+
+                        <a href="#" class="login__forgot">¿Olvido su contraseña?</a>
+                        <button class="login__button" type="submit">Sign In</button>
+
+                        
+                        <div>
+                            <span class="login__account">¿No Tienes una Cuenta?</span>
+                            <span class="login__signin" id="sign-up">
+                                <a class="" href="{% url 'signup' %}">Sign Up</a>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        
+        <!--Footer-->
+        <footer class="footer section">
+            <p class="footer__copy">&#169; Study Page. All rigths reserved</p>
+        </footer>
+    </body>
+</html>
+

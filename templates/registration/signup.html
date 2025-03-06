@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Remix Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--Box Icon-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--Css-->
+        <link rel="stylesheet" href="{% static 'css/login.css' %}"> 
+
+        <title>LogIn</title>
+    </head>
+    <body>
+
+        <!--Header-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="{% url 'Home' %}" class="nav__logo">
+                    <i class="ri-quill-pen-line nav__logo-icon"></i> Study Page
+                </a>
+            </nav>
+        </header>
+
+        <!--Main-->
+        <div class="login">
+            <div class="login__content">
+                <div class="login__img">
+                    <img src="{% static 'img/login.svg' %}" alt="login">
+                </div>
+
+                <div class="login__forms">
+                    <form action="" class="login__create" id="login-up" method="post">{% csrf_token %}
+                        <h1 class="login__titile">Crea una cuenta</h1>
+                        {% csrf_token %}
+                        {{form.as_p}}
+
+                        <button type ="submit" id = "submit">Registrarse</button>
+                        
+
+                        <div>
+                            <span class="login__account">¿Ya Tienes una Cuenta?</span>
+                            <span class="login__signup" id="sign-in">
+                                <a href="{% url 'login' %}">Sign In</a>
+                            </span>
+                        </div>
+
+                        <div class="login__social">
+                            <a href="#" class="login__social-icon"><i class='bx bxl-facebook' ></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-twitter' ></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <!--Footer-->
+        <footer class="footer section">
+            <p class="footer__copy">&#169; Study Page. All rigths reserved</p>
+        </footer>
+
+    </body>
+</html>
+

@@ -1,0 +1,183 @@
+/*-Google fontss-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*- Varibales -*/
+:root {
+    --header-height: 3.5rem; /*56px*/
+  
+    /*- Colors-*/
+    --hue: 152;
+    --first-color: hsl(var(--hue), 24%, 32%);
+    --first-color-dark: hsl(var(--hue), 23%, 16%);
+    --first-color-light: hsl(var(--hue), 24%, 66%);
+    --first-color-lighten: hsl(var(--hue), 24%, 92%);
+  
+    /*- Font and typography -*/
+    --body-font: 'Poppins', sans-serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+
+/*- Base -*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--first-color);
+}
+
+h1{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--first-color-dark);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button{
+    border: none;
+}
+
+/*- Header -*/
+.header{
+    width: 100%;
+    background-color: var(--body-color);
+    position: flex;
+    top: 0;
+    left: 0;
+}
+  
+.nav{
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    color: var(--first-color);
+    margin-left: 3.5rem;
+}
+
+.nav__logo{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -1px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    transition: .3s;
+}
+  
+.nav__logo-icon{
+    font-size: 1.15rem;
+    color: var(--first-color);
+}
+  
+.nav__logo:hover{
+    color: var(--first-color);
+}
+
+
+/*main*/
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 82% 18%;
+}
+  
+.equation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
+    font-size: 5.2vw;
+    background: #fff;
+    border-radius: 3px;
+    text-align: center;
+    margin: 10px 10px 0px 10px;
+}
+  
+.equation h1{
+    display: inline;
+    padding: 20px;
+}
+  
+.answer-options{
+    font-size: 5.2vw;
+    margin-right: 10px;
+}
+  
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 10px;
+    color: #fff;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
+    background-color: var(--first-color);
+}
+  
+#num1{
+   color: var(--first-color-light);
+}
+
+#operacion{
+    color: var(--first-color-dark);
+}
+
+#num2{
+    color: var(--first-color-light);
+}
+
+#equal{
+    color: var(--first-color-dark);
+}
+
+#question{
+    color: var(--first-color-lighten);
+}
+
+
+/*- ScrollL bar -*/
+::-webkit-scrollbar{
+    width: .6rem;
+    background: hsl(var(--hue), 4%, 53%);
+}
+  
+::-webkit-scrollbar-thumb{
+    background: hsl(var(--hue), 4%, 29%);
+    border-radius: .5rem;
+}
+
+/*- Footer -*/
+.footer__copy{
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    margin: 5rem 0 1rem;
+}

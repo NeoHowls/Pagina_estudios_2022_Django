@@ -1,0 +1,55 @@
+{% extends "ejerciciosVista.html" %}
+{% block content %}
+
+<div class="login">
+    <div class="login__content">
+        <div class ="container">
+
+            <div class ="row mt-3" style="border-style: solid;">
+                
+                <div class="col-md-3 mb.-3">
+                <div class="card" style = "width: 20rem">
+                <h1>Nombre del ejercicio {{ejercicio.nombre_ejercicio}} </h1>
+                
+                <p>Si juan tiene {{ejercicio.PrimerNumero}} manzanas y Marco le regala {{ejercicio.SegundoNumero}}, ¿cuantas manzandas tiene?</p>
+
+                <form action="">
+                    <label for="repuesta">Ingrese su repuesta</label><br>
+                    <input type="number" id="repuesta" name="repuesta" value= 0><br>
+                    
+                    <p>El enviar solo devuelve al inicio</p>
+                    <input type="submit" value="Enviar">
+                    <br>
+                    
+                    <a class ="btn btn-primary" href = "{% url 'edit_ejercicio' ejercicio.pk%}" role="button">
+                        <button class ="login__button">
+                            Editar Ejercicio
+                        </button>
+                    </a>
+                    <br>
+                    <a class ="btn btn-danger" href = "{% url 'delete_ejercicio' ejercicio.pk%}" role="button">
+                        <button class ="login__button">
+                            Borrar Ejercicio
+                        </button>
+                    </a>
+                  </form> 
+                </div>
+        
+        
+        
+        
+                </div>
+        
+
+            </div>
+        
+        
+        
+        
+        </div>
+        
+
+    </div>
+</div>
+
+{% endblock content %}

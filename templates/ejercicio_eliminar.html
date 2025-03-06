@@ -1,0 +1,43 @@
+{% extends "ejerciciosVista.html" %}
+{% block content %}
+
+<div class="login">
+    <div class="login__content">
+        <div class ="container">
+
+            <div class ="row mt-3" style="border-style: solid;">
+                
+                <div class="col-md-3 mb.-3">
+                <div class="card" style = "width: 20rem">
+                <h1>Elimando : {{ejercicio.nombre_ejercicio}} </h1>
+                <form action="" method="post"> {% csrf_token %} 
+                    <p>¿Seguro que quiere eliminar el ejercicio {{ejercicio.nombre_ejercicio}} ?</p>
+
+
+                    <input class="btn btn_primary" type="submit" value="Confirmar">
+
+                </form>
+
+                
+
+               
+                </div>
+        
+        
+        
+        
+                </div>
+        
+
+            </div>
+        
+        
+        
+        
+        </div>
+        
+
+    </div>
+</div>
+
+{% endblock content %}
